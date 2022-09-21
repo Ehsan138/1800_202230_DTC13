@@ -21,11 +21,8 @@ Technologies used for this project:
 * JavaScript
 * Bootstrap
 * ...
-<<<<<<< HEAD
 
-=======
  
->>>>>>> cb7f8ac39a9a23e593de3e3a38c9ed0861c1377c
 ## Content
 
 Content of the project folder:
