@@ -9,6 +9,7 @@
 This browser based web application to ...
 
 * Hi my name is Ehsan, and I'm excited about this project.
+* Hi my name is jaskarn, and I'm excited about this project.
  
 ## Technologies
 
