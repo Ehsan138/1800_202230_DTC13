@@ -6,7 +6,8 @@
 
 ## General Info
 This browser based web application to ...
-	
+* Hi my name is Annette. I'm excited about this project because we can make our own app! :)
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
