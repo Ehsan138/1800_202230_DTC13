@@ -8,6 +8,8 @@
 
 This browser based web application to ...
 
+* Hi my name is Annette. I'm excited about this project because we can make our own app! :)
+
 * Hi my name is Ehsan, and I'm excited about this project.
 * Hi my name is jaskarn, and I'm excited about this project.
  
@@ -19,7 +21,11 @@ Technologies used for this project:
 * JavaScript
 * Bootstrap
 * ...
+<<<<<<< HEAD
+
+=======
  
+>>>>>>> cb7f8ac39a9a23e593de3e3a38c9ed0861c1377c
 ## Content
 
 Content of the project folder:
