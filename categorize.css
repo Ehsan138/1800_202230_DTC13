@@ -2,15 +2,8 @@ html,
 body {
     height: 100%;
     width: 100%;
-}
-
-
-.form-check {
     background-image: url('./images/sunset_categorize.jpg');
     background-size: cover;
-    min-width: 100%;
-    min-height: 100%;
-    text-align: center;
 }
 
 .text_welcome {
@@ -18,7 +11,6 @@ body {
     font-size: 70px;
     color: white;
     font-family: serif;
-
 }
 
 .heading {
@@ -27,6 +19,14 @@ body {
 
 i {
     float: left;
+}
+
+i:hover {
+    background-color: lightgrey;
+}
+
+.main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .content {
@@ -47,7 +47,34 @@ i {
 
 }
 
+.heading {
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
 
+.form-check {
+    min-width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
+
+.form-select {
+    vertical-align: middle;
+    width: 80%;
+    margin: auto;
+}
+
+.select-btn {
+    text-align: center;
+}
+
+.form-fill {
+    text-align: center;
+    vertical-align: middle;
+    width: 80%;
+    margin: auto;
+}
 
 @media screen and (max-width: 500px) {
     .navbar2 {
@@ -56,5 +83,19 @@ i {
 
     .navbar {
         background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+    }
+
+    /* .form-check {
+        width: 95%;
+        margin: 0 auto;
+    } */
+
+    span.input-group-text {
+        display: none !important;
+        visibility: hidden;
+
+        /* vertical-align: middle;
+        width: 80%;
+        margin: auto; */
     }
 }
