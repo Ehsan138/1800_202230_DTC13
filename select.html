@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab05 COMP1800</title>
+    <meta name="comp1800 template" content="My 1800 App">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Other libraries go here -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Link to styles of your own -->
+
+    <link rel="stylesheet" href="./categorize.css">
+
+
+</head>
+
+<body>
+
+    <!--The Nav bar is hidden-->
+    <!-- Nav bar -->
+    <div class="navbar2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark  py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/managing habits-logos_black.png" width="30" class="navbar_font_Color">
+                    TEST TITLE
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--HEADING-->
+    <div class="heading">
+        <i class="material-icons md-48">chevron_left</i>
+    </div>
+
+    <br>
+
+    <!--Intro content-->
+    <div class="intro">
+        <h1>Habit Categories</h1>
+        <br>
+    </div>
+
+
+    <!--Accordion habit info-->
+    <div class="main">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        About Overconsumption
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+                        dignissimos.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde possimus corporis! Provident
+                        doloremque quia neque officia saepe. Architecto, in.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        About Underconsumption
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus,
+                        aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero officia blanditiis
+                        nesciunt
+                        accusamus voluptates nisi voluptatem labore explicabo officiis vitae!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sticky Footer (bottom navbar)-->
+        <div class="navbar justify-content-evenly fixed-bottom py-3 bg-light" class="navbar2">
+            <div class="container text-center">
+                <i class="material-icons md-48">home</i>
+                <i class="material-icons md-48">chat </i>
+                <i class="material-icons md-48">group</i>
+                <i class="material-icons md-48">settings</i>
+            </div>
+        </div>
+
+</body>
+
+</html>
