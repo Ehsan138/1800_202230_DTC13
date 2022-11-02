@@ -34,7 +34,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
@@ -43,12 +43,13 @@
     <!------------------------------>
 
     <!-- our own navbar goes here -->
-    <nav id="navbarPlaceholder">
-        <nav class="navbar navbar-expand-lg navbar-light bg-secondary py-3">
+    <div class="navbar2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark  py-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./images/managing habits-logos_black.png" width="30">
-                    CHANGING HABITS</a>
+                    <img src="./images/managing habits-logos_black.png" width="30" class="navbar_font_Color">
+                    CHANGING HABITS
+                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -62,11 +63,18 @@
                 </div>
             </div>
         </nav>
-    </nav>
+    </div>
+
+    <!--HEADING-->
+    <div class="heading">
+        <i class="material-icons md-48" style="font-size: 75px; float: right;"><a
+                style="color: black; text-decoration: none;" href="./categorize.html">add</a></i>
+    </div>
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
     <div class="all-habits">
+        <h1 class="text_welcome">Welcome Tom</h1>
         <a class="habit-card" href="./habit.html">
             <div class="card-body text-primary">
                 <h5 class="card-title">Playing Video Games</h5>
@@ -75,7 +83,7 @@
                     content.</p>
             </div>
         </a>
-        <a class="habit-card" href="#">
+        <a class="habit-card" href="./habit.html">
             <div class="card-body text-secondary">
                 <h5 class="card-title">Drinking Water</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -83,7 +91,7 @@
                     content.</p>
             </div>
         </a>
-        <a class="habit-card" href="#">
+        <a class="habit-card" href="./habit.html">
             <div class="card-body text-success">
                 <h5 class="card-title">Alcohol</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -91,7 +99,7 @@
                     content.</p>
             </div>
         </a>
-        <a class="habit-card" href="#">
+        <a class="habit-card" href="./habit.html">
             <div class="card-body text-danger">
                 <h5 class="card-title">Eating Disorder</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -99,7 +107,7 @@
                     content.</p>
             </div>
         </a>
-        <a class="habit-card" href="#">
+        <a class="habit-card" href="./habit.html">
             <div class="card-body text-warning">
                 <h5 class="card-title">Prescription Drugs</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -107,7 +115,7 @@
                     content.</p>
             </div>
         </a>
-        <a class="habit-card" href="#">
+        <a class="habit-card" href="./habit.html">
             <div class="card-body text-info">
                 <h5 class="card-title">Tobacco</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -133,11 +141,12 @@
     <div class="bottom-nav">
         <div class="navbar justify-content-evenly fixed-bottom py-3 bg-secondary">
             <div class="container text-center">
-                <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">home</a></i>
+                <i class="material-icons md-48"><a style="color: black; text-decoration: none;"
+                        href="./main.html">home</a></i>
                 <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">group</a></i>
                 <!-- <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">add</a></i> -->
                 <i class="material-icons md-48"><a style="color: black; text-decoration: none;"
-                        href="#">settings</a></i>
+                        href="./setting.html">settings</a></i>
             </div>
         </div>
     </div>
