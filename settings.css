@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+.welcome_middle {
+    background-image: url('../images/background2.jpg');
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
+
+.text_welcome {
+    padding: 70px;
+    font-size: 70px;
+    color: white;
+    font-family: serif;
+
+}
+
+
+
+.navbar-light .navbar-brand{
+    color: white;
+}
+
+.btn{
+    background-color: white;
+    color: black;
+    
+}
+
+.content{
+    background-color: white;
+    padding: 15px;
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width: 500px){   
+    .navbar{
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+    }
+}
