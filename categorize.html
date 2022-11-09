@@ -1,66 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Lab05 COMP1800</title>
-    <meta name="comp1800 template" content="My 1800 App">
+    <title>My BCIT Project</title>
+    <meta name="comp1800 template" content="My 1800 App" />
 
+    <!------------------------>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap Library CSS CDN go here -->
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Boostrap Library JS CDN  go here -->
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <!-- Other libraries go here -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-    <!-- Link to styles of your own -->
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        body {
+            background-image: url('../images/background5.jpg');
 
-    <link rel="stylesheet" href="./categorize.css">
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-width: 100%;
+            min-height: 100%;
+            text-align: center;
+        }
 
-
+        background-size: cover;
+        min-width: 100%;
+        min-height: 100%;
+        text-align: center;
+        }
+    </style>
 </head>
 
 <body>
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <!------------------------------>
 
-    <!--The Nav bar is hidden-->
-    <!-- Nav bar -->
-    <div class="navbar2">
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark  py-3">
+    <!-- our own navbar goes here -->
+    <nav id="navbarPlaceholder">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark py-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./images/MyHabit.png" width="150" class="navbar_font_Color">
-                    TEST TITLE
-                </a>
+                <a class="navbar-brand" style="color: white;">
+                    <img src="./images/MyHabit.PNG" width="120">
+                    MyHabit</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
-    </div>
+    </nav>
 
-    <!--HEADING-->
-    <div class="heading">
-        <i class="material-icons md-48">chevron_left</i>
-    </div>
-
-
-
+    <!-- the body of your page goes here -->
     <!--Habit menu dropdown-->
     <div class="main">
         <div class="form-check">
@@ -96,13 +108,13 @@
                 </div>
             </div>
         </div>
-
-
-
-        <br>
-
     </div>
     <br>
+
+    <!-- our own footer goes here-->
+    <nav id="footerPlaceholder"></nav>
+
+
 
 
     <!--Sticky Footer (bottom navbar)-->
