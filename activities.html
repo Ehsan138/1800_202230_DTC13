@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My BCIT Project</title>
+    <meta name="comp1800 template" content="My 1800 App" />
+
+    <!------------------------>
+    <!-- Required meta tags -->
+    <!------------------------>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <script src="./activities.js"></script> -->
+    <style>
+        body {
+            background-image: url('../images/background2.jpg');
+
+            background-size: cover;
+            min-width: 100%;
+            min-height: 100%;
+            text-align: center;
+        }
+
+        #chart-1 {
+            border: solid black 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <!------------------------------>
+
+    <!-- our own navbar goes here -->
+    <nav id="navbarPlaceholder">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="color: white;">
+                    <img src="./images/MyHabit.PNG" width="120">
+                    MyHabit</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <!--HEADING-->
+    <div class="heading">
+        <i class="material-icons md-48" style="font-size: 45px; float: left;"><a
+                style="color: white; text-decoration: none;" href="./habit.html">arrow_back_ios</a></i>
+    </div>
+
+    <!-- the body of your page goes here -->
+    <!-- stuff -->
+    <!-- <canvas id="chart-1" style="width:100%;max-width:600px;display:block;margin:30px auto;"></canvas> -->
+
+
+    <div class="card bg-light mb-3" style="max-width: 532px; display:block;margin:100px auto;">
+        <div class="card-header">Daily Average Points: 53
+            <script>
+                function calculate(yValues) {
+                    console.log(yValues.reduce((a, b) => a + b) / yValues.length);
+                }
+            </script>
+        </div>
+        <div id="card-chart">
+            <canvas id="chart-1" style="width:100%;max-width:500px;display:block;margin:30px auto;"></canvas>
+        </div>
+
+        <script>
+            var xValues = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var yValues = [43, 62, 98, 2, 13, 73, 26];
+            var barColors = ["red", "green", "blue", "orange", "brown", "gray", "yellow"];
+
+            new Chart("chart-1", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: "Daily Points:"
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <div class="card bg-light mb-3" style="max-width: 532px; display:block;margin:50px auto;">
+        <div class="card-header">More Information:</div>
+        <div class="card-body">
+            <h5 class="card-title">91% Increase In Points Compare To The Last Week</h5>
+            <h5 class="card-title">Total Weekly Points: 1094 points</h5>
+            <h5 class="card-title">Goal For This Week Was: 983 points</h5>
+            <p class="card-text"></p>
+        </div>
+
+
+        <!-- our own footer goes here-->
+        <nav id="footerPlaceholder"></nav>
+
+
+
+
+        <!--Sticky Footer (bottom navbar)-->
+        <div class="bottom-nav">
+            <div class="navbar justify-content-evenly fixed-bottom py-3 bg-dark">
+                <div class="container text-center">
+                    <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                            href="./main.html">home</a></i>
+                    <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                            href="#">group</a></i>
+                    <!-- <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">add</a></i> -->
+                    <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                            href="./setting.html">settings</a></i>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
