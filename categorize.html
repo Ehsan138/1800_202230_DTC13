@@ -96,6 +96,11 @@
         <h1>Adding Your Habits <span id="AddHabit"></span></h1>
         <br><br>
         <form>
+            <!-- <form action="/action_page.php">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <label for="email">Enter habit here</label>
+                </div> -->
             <div class="form-group">
                 <label for="exampleFormControlInput1">Manually enter habit:</label>
                 <input type="text" class="form-control" id="manualhabit" placeholder="Enter habit here:">
@@ -114,8 +119,7 @@
                 </select>
                 <br>
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-lg btn-primary pull-right"
-                        onclick="enterHabit()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="enterHabit()">Submit</button>
                 </div>
         </form>
 
