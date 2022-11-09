@@ -9,7 +9,7 @@ function insertName() {
                 var user_Name = userDoc.data().name;
                 console.log(user_Name);
                 $("#name-goes-here").text(user_Name); //jquery
-                // document.getElementByID("name-goes-here").innetText=user_Name;
+                // document.getElementByID("name-goes-here").innerText=user_Name;
             })
         }
 
