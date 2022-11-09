@@ -93,18 +93,18 @@
     <!--JS Test-->
     <div class="container">
         <br>
-        <h1>Adding Your Habits <span id="HikeName"></span></h1>
+        <h1>Adding Your Habits <span id="AddHabit"></span></h1>
         <br><br>
         <form>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Manually enter habit:</label>
-                <input type="text" class="form-control" id="title" placeholder="Enter habit here:">
+                <input type="text" class="form-control" id="manualhabit" placeholder="Enter habit here:">
             </div>
             <hr>
             <br>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Select from list of common habits:</label>
-                <select class="form-control" id="level">
+                <select class="form-control" id="selecthabit">
                     <option>Example Habit 1</option>
                     <option>Example Habit 2</option>
                     <option>Example Habit 3</option>
@@ -115,7 +115,7 @@
                 <br>
                 <div class="d-flex justify-content-end">
                     <button type="button" class="btn btn-lg btn-primary pull-right"
-                        onclick="writeReview()">Submit</button>
+                        onclick="enterHabit()">Submit</button>
                 </div>
         </form>
 
