@@ -1,19 +1,19 @@
-let hikeID = localStorage.getItem("habitID");
+let hikeID = localStorage.getItem("hikeID");
 
-db.collection("habits").where("code", "==", habitID)
+db.collection("hikes").where("code", "==", hikeID)
     .get()
-    .then(queryHabit => {
+    .then(queryHike => {
         //see how many results you have got from the query
-        size = queryHabit.size;
+        size = queryHike.size;
         // get the documents of query
-        Hikes = queryHabit.docs;
+        Hikes = queryHike.docs;
 
         // We want to have one document per hike, so if the the result of 
         //the query is more than one, we can check it right now and clean the DB if needed.
         if (size = 1) {
-            var thisHabit = Habits[0].data();
-            name = thisHabit.name;
-            document.getElementById("HabitName").innerHTML = name;
+            var thisHike = Hikes[0].data();
+            name = thisHike.name;
+            document.getElementById("HikeName").innerHTML = name;
         } else {
             console.log("Query has more than one data")
         }
@@ -23,13 +23,11 @@ db.collection("habits").where("code", "==", habitID)
     });
 
 
-function writeHabit() {
+function writeReview() {
     console.log("in")
     let Title = document.getElementById("title").value;
     let Level = document.getElementById("level").value;
-    let Season = document.getElementById("season").value;
-    let Description = document.getElementById("description").value;
-    console.log(Title, Level, Season, Description, Flooded, Scrambled);
+    console.log(Title, Level);
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -44,11 +42,9 @@ function writeHabit() {
                         userID: userID,
                         title: Title,
                         level: Level,
-                        season: Season,
-                        description: Description,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
-                        window.location.href = "thanks.html"; //new line added
+                        window.location.href = "viewhabits.html"; //new line added
                     })
                 })
 
