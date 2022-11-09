@@ -59,22 +59,10 @@ i:hover {
     text-align: center;
 }
 
-.form-select {
-    vertical-align: middle;
-    width: 80%;
-    margin: auto;
-}
-
 .select-btn {
     text-align: center;
 }
 
-.form-fill {
-    text-align: center;
-    vertical-align: middle;
-    width: 80%;
-    margin: auto;
-}
 
 @media screen and (max-width: 500px) {
     .navbar2 {
@@ -85,17 +73,21 @@ i:hover {
         background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
     }
 
+    .form-check {
+        width: 95%;
+    }
+
     /* .form-check {
         width: 95%;
         margin: 0 auto;
     } */
 
-    span.input-group-text {
+    /* span.input-group-text {
         display: none !important;
-        visibility: hidden;
+        visibility: hidden; */
 
-        /* vertical-align: middle;
+    /* vertical-align: middle;
         width: 80%;
         margin: auto; */
-    }
+}
 }
