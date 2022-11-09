@@ -76,21 +76,58 @@
     <!-- stuff -->
     <div class="habit-page">
         <div id="habit-part-1">
-            <h5 class="card-title">Goals</h5>
-            <p id="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magni non eius ea iste
+            <!-- <h5 class="card-title">Goals</h5> -->
+
+            <div class="container">
+                <h1 style="color: white;"> Goals </h1>
+                <form>
+                    <fieldset class="mb-3" id="personalInfoFields" disabled>
+                        <div class="form-group">
+                            <label style="color: white;">Number</label>
+                            <input type="text" id="numberInput" class="form-control"
+                                placeholder="Enter the number of times">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="color: white;">Start Time</label>
+                            <input type="text" id="start_timeInput" class="form-control"
+                                placeholder="Enter the start time">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label style="color: white;">End Time</label>
+                            <input type="text" id="end_timeInput" class="form-control" placeholder="Enter the end time">
+                        </div>
+                    </fieldset>
+                    <div class="d-flex justify-content-end mt-5">
+                        <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                        <span style="width: 10px"></span>
+                        <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- <p id="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magni non eius ea iste
                 fugit facere recusandae. Quas eum error provident aliquam ipsum, repudiandae nulla odit neque dolore
-                accusamus aut?</p>
-            <a href="./edit_goal.html"><button type="button" class="btn btn-primary btn-lg btn-block">Edit
-                    Goals</button></a>
+                accusamus aut?</p> -->
+
+            <!-- <a href="./edit_goal.html"><button type="button" class="btn btn-primary btn-lg btn-block">Edit
+                    Goals</button></a> -->
+
             <!-- <button type="button" class="btn btn-primary btn-lg btn-block">Edit Goals</button> -->
+
         </div>
 
-        <div><textarea id="goal-textarea" name="paragraph_text" cols="50" rows="10"
+        <!-- <div><textarea id="goal-textarea" name="paragraph_text" cols="50" rows="10"
                 style="display: block; margin-top: 0 40px"></textarea>
-        </div>
+        </div> -->
+
+
         <!-- <div><input type="text" id="goal-textarea" style="width: 400px; height: 150px; margin-top: 50px;"></div> -->
         <!-- <a href="./habit.html"><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></a> -->
-        <div><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></div>
+
+        <!-- <div><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></div> -->
 
         <div id="habit-part-2">
             <a href="./activities.html"><button type="button"
