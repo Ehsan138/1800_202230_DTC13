@@ -51,6 +51,8 @@
             height: 200px;
             align-items: center;
             margin-top: 50px;
+            padding: 35px;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -73,12 +75,31 @@
         </nav>
     </nav>
 
+    <!--HEADING-->
+    <div class="heading">
+        <i class="material-icons md-48" style="font-size: 45px; float: left;"><a
+                style="color: white; text-decoration: none;" href="./setting.html">arrow_back_ios</a></i>
+    </div>
+
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div class="content">name</div>
+    <div class="content">
+    <b>User Info</b>
+    <p>Email: <span id="email-goes-here"> </span></p>
+    </p>name: <span id="name-goes-here"> </span></p>
+    <p>School: <span id="school-goes-here"> </span></p>
+    </div>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="./scripts/firebaseAPI_TEAM13.js"></script>
+    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/settings.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
 
 
 
