@@ -68,10 +68,37 @@
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div><textarea id="goal-textarea" name="paragraph_text" cols="50" rows="10" style="margin-top: 40px;"></textarea>
+    <!-- <div><textarea id="goal-textarea" name="paragraph_text" cols="50" rows="10" style="margin-top: 40px;"></textarea>
     </div>
+    <a href="./habit.html"><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></a> -->
+
     <!-- <div><input type="text" id="goal-textarea" style="width: 400px; height: 150px; margin-top: 50px;"></div> -->
-    <a href="./habit.html"><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></a>
+
+
+    <div class="container">
+        <h1>User Profile </h1>
+        <form>
+            <fieldset class="mb-3" id="personalInfoFields" disabled>
+                <div class="form-group">
+                    <label>Number of times per day you want to get notification:</label>
+                    <input type="text" id="numberInput" class="form-control" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>The start time and the end time for getting notifications:</label>
+                    <input type="text" id="timeInput" class="form-control" placeholder="Enter your city">
+                </div>
+            </fieldset>
+            <div class="d-flex justify-content-end mt-5">
+                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                <span style="width: 10px"></span>
+                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>

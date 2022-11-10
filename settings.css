@@ -22,11 +22,6 @@ body {
 }
 
 
-
-.navbar-light .navbar-brand{
-    color: white;
-}
-
 .btn{
     background-color: white;
     color: black;
@@ -37,14 +32,10 @@ body {
     background-color: white;
     padding: 15px;
     width: 70%;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: auto;
+    margi
 }
 
 
 
-@media screen and (max-width: 500px){   
-    .navbar{
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-    }
-}
