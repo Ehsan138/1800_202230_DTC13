@@ -17,9 +17,19 @@ var uiConfig = {
             email: user.email,
             country: "Canada",
             school: "BCIT",
+            // goals
             number: 4,
             start_time: 4,
             end_time: 10,
+            // select from list of habits
+            poortime: false,
+            lacksleep: false,
+            lackexercise: false,
+            lackwater: false,
+            lackposture: false,
+            phoneaddiction: false,
+            gameaddiction: false,
+            gamblingaddiction: false,
           }).then(function () {
             console.log("New user added to firestore");
             window.location.assign("main.html");

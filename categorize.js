@@ -21,15 +21,13 @@ function checkboxListen() {
 
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                // User is signed in.
-                // Add this new information to user's document 
                 db.collection("users").doc(user.uid).set({
                     poortime: poortime,
                     lacksleep: lacksleep,
                     lackexercise: lackexercise,
                     lackwater: lackwater,
                     lackposture: lackposture,
-                    phoneaddiction: phoneaddiction
+                    phoneaddiction: phoneaddiction,
                     gameaddiction: gameaddiction,
                     gamblingaddiction: gamblingaddiction
                 }, { merge: true })
@@ -44,9 +42,8 @@ checkboxListen();
 
 function enterHabit() {
     console.log("in")
-    let ManualHabit = document.getElementById("manualhabit").value;
-    let SelectHabit = document.getElementById("selecthabit").value;
-    console.log(ManualHabit, SelectHabit);
+    let SelectHabit = document.getElementById("enterhabit").value;
+    console.log(enterHabit);
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
