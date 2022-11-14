@@ -1,26 +1,45 @@
-// let hikeID = localStorage.getItem("hikeID");
+function checkboxListen() {
+    console.log("inside checkboxListen");
+    document.getElementById("submit-preferences").addEventListener("click", function () {
+        var poortime = document.getElementById("poor-time").checked;
+        var lacksleep = document.getElementById("lack-sleep").checked;
+        var lackexercise = document.getElementById("lack-sleep").checked;
+        var lackwater = document.getElementById("lack-water").checked;
+        var lackposture = document.getElementById("lack-posture").checked;
+        var phoneaddiction = document.getElementById("phone-addict").checked;
+        var gameaddiction = document.getElementById("game-addict").checked;
+        var gamblingaddiction = document.getElementById("gamble-addict").checked;
+        console.log(poortime);
+        console.log(lacksleep);
+        console.log(lackexercise);
+        console.log(lackwater);
+        console.log(lackposture);
+        console.log(phoneaddiction);
+        console.log(gameaddiction);
+        console.log(gamblingaddiction);
 
-// db.collection("hikes").where("code", "==", hikeID)
-//     .get()
-//     .then(queryHike => {
-//         //see how many results you have got from the query
-//         size = queryHike.size;
-//         // get the documents of query
-//         Hikes = queryHike.docs;
 
-//         // We want to have one document per hike, so if the the result of 
-//         //the query is more than one, we can check it right now and clean the DB if needed.
-//         if (size = 1) {
-//             var thisHike = Hikes[0].data();
-//             name = thisHike.name;
-//             document.getElementById("HikeName").innerHTML = name;
-//         } else {
-//             console.log("Query has more than one data")
-//         }
-//     })
-//     .catch((error) => {
-//         console.log("Error getting documents: ", error);
-//     });
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                // Add this new information to user's document 
+                db.collection("users").doc(user.uid).set({
+                    poortime: poortime,
+                    lacksleep: lacksleep,
+                    lackexercise: lackexercise,
+                    lackwater: lackwater,
+                    lackposture: lackposture,
+                    phoneaddiction: phoneaddiction
+                    gameaddiction: gameaddiction,
+                    gamblingaddiction: gamblingaddiction
+                }, { merge: true })
+            } else {
+                // No user is signed in.
+            }
+        });
+    })
+}
+checkboxListen();
 
 
 function enterHabit() {
@@ -37,10 +56,7 @@ function enterHabit() {
             currentUser.get()
                 .then(userDoc => {
                     var userEmail = userDoc.data().email;
-                    db.collection("habits").add({
-                        userID: userID,
-                        manualhabit: ManualHabit,
-                        selecthabit: SelectHabit,
+                    db.collection("users").add({
                         timestamp: firebase.firestore.FieldValue.serverTimestamp()
                     }).then(() => {
                         window.location.href = "viewhabits.html"; //new line added

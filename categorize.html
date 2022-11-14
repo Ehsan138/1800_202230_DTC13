@@ -37,13 +37,12 @@
     <link rel="stylesheet" href="./style.css" />
     <style>
         body {
-            background-image: url('../images/background5.jpg');
-            background-size: cover;
+            background-image: url('../images/background6.jpg');
+            background-size: fill;
             background-repeat: no-repeat;
             min-width: 100%;
             min-height: 100%;
             text-align: center;
-            background-size: cover;
             min-width: 100%;
             min-height: 100%;
             text-align: center;
@@ -70,25 +69,6 @@
     </nav>
 
     <!-- the body of your page goes here -->
-    <!--Habit menu dropdown-->
-    <!-- <div class="main">
-        <br>
-        <div class="form-check">
-            <h1>Choose from list of common habits:</h1>
-            <select class="form-select">
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
-                <div class="select-btn">
-                    <input type="submit" class="btn btn-secondary" value="Add Habit">
-                </div>
-            </select>
-        </div> -->
 
     <!--JS Test-->
     <div class="container">
@@ -96,50 +76,65 @@
         <h1>Adding Your Habits <span id="AddHabit"></span></h1>
         <br><br>
         <form>
-            <!-- <form action="/action_page.php">
-                <div class="form-floating mb-3 mt-3">
-                    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
-                    <label for="email">Enter habit here</label>
-                </div> -->
             <div class="form-group">
-                <label for="exampleFormControlInput1">Manually enter habit:</label>
+                <h4><label for="exampleFormControlInput1">Manually enter habit:</label></h4>
                 <input type="text" class="form-control" id="manualhabit" placeholder="Enter habit here:">
             </div>
             <hr>
-            <br>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Select from list of common habits:</label>
-                <select class="form-control" id="selecthabit">
-                    <option>Example Habit 1</option>
-                    <option>Example Habit 2</option>
-                    <option>Example Habit 3</option>
-                    <option>Example Habit 4</option>
-                    <option>Example Habit 5</option>
-                    <option>Example Habit 6</option>
-                </select>
-                <br>
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary" onclick="enterHabit()">Submit</button>
-                </div>
-        </form>
 
 
-    </div>
-
-
-    <!--Sticky Footer (bottom navbar)-->
-    <div class="bottom-nav">
-        <div class="navbar justify-content-evenly fixed-bottom py-3 bg-dark">
-            <div class="container text-center">
-                <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
-                        href="./main.html">home</a></i>
-                <i class="material-icons md-48"><a style="color: white; text-decoration: none;" href="#">group</a></i>
-                <!-- <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">add</a></i> -->
-                <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
-                        href="./setting.html">settings</a></i>
+            <h4>Check all that apply: </h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Poor time management</label>
             </div>
-        </div>
-    </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Getting too little sleep</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Lack of exercise</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Not drinking enough water</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Not having good posture while
+                    sitting</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Phone addiction</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Gaming addiction</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">Gambling addiction</label>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="button" onclick="enterHabit()">Submit Habits</button>
+
+
+            <!--Sticky Footer (bottom navbar)-->
+            <div class=" bottom-nav">
+                <div class="navbar justify-content-evenly fixed-bottom py-3 bg-dark">
+                    <div class="container text-center">
+                        <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                                href="./main.html">home</a></i>
+                        <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                                href="#">group</a></i>
+                        <!-- <i class="material-icons md-48"><a style="color: black; text-decoration: none;" href="#">add</a></i> -->
+                        <i class="material-icons md-48"><a style="color: white; text-decoration: none;"
+                                href="./setting.html">settings</a></i>
+                    </div>
+                </div>
+            </div>
 
 </body>
 
