@@ -5,13 +5,6 @@ body {
 }
 
 
-.welcome_middle {
-    background-image: url('../images/background2.jpg');
-    background-size: cover;
-    min-width: 100%;
-    min-height: 100%;
-    text-align: center;
-}
 
 .text_welcome {
     padding: 70px;
@@ -34,8 +27,29 @@ body {
     width: 70%;
     border-radius: 15px;
     margin: auto;
-    margi
 }
 
+.profile{
+    display: block;
+}
 
+.logout{
+    display: block;
+}
 
+.content{
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.reminders{
+    display: block;
+}
+
+.Delete_Account{
+    display: block;
+}
+
+.support{
+    display: block; 
+}

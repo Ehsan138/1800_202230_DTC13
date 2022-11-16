@@ -34,10 +34,10 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./style.css" />
     <style>
         body {
-            background-image: url('../images/background2.jpg');
+            background-image: url('../images/background6.jpg');
 
             background-size: cover;
             min-width: 100%;
@@ -65,60 +65,8 @@
         </nav>
     </nav>
 
-     <!--HEADING-->
-     <div class="heading">
-        <i class="material-icons md-48" style="font-size: 45px; float: left;"><a
-                style="color: white; text-decoration: none;" href="./main.html">arrow_back_ios</a></i>
-    </div>
-
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div class="welcome_middle">
-
-
-       <div class="content" style="margin-top: 50px;">
-        <b><u>Account</u></b>
-
-        <div id="profile">
-        <a href="profile_page.html" style="color: black; text-decoration: none;">
-        <i class="material-icons md-48">account_circle</i>
-        &nbsp;Profile</a>&nbsp;
-        </div>
-
-        <div id="logout">
-        <a href="logout_page.html" style="color: black; text-decoration: none;">
-        <i class="material-icons md-48">logout</i>
-        &nbsp;Logout
-        </a></div>  
-       </div>
-
-
-
-       <div class="content">
-        <b><u>Reminders</u></b>
-        <div id = "reminders">
-        Reminders &nbsp;
-        <i class="material-icons md-98" onclick="reminders" id="toggle">toggle_on</i>
-        </div>
-        <br><br>
-       </div>
-
-   
-       <div class="content">
-        <b><u>Other</u></b>
-        <div id="Delete_Account">
-        <i class="material-icons md-98">delete</i>
-        &nbsp;Delete Account
-        </div>
-
-        <div id="support">
-        <i class="material-icons md-98">contact_support</i>
-        &nbsp;Support
-        <br><br>
-        </div>
-       </div>
-
-    </div>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -139,18 +87,6 @@
             </div>
         </div>
     </div>
-
-<script>
-function reminders(){
-    var x = document.getElementById("toggle");
-    if (x.style.display === "none") {
-    x.style.display = "block";
-    } else {
-    x.style.display = "none";
-    }
-}
-
-</script>
 
 </body>
 
