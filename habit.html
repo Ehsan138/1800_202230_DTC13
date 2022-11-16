@@ -35,10 +35,9 @@
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="./habit.css  " />
-    <script src="./habit.js"></script>
     <style>
         body {
-            background-image: url('../images/background2.jpg');
+            background-image: url('../images/background6.jpg');
 
             background-size: cover;
             min-width: 100%;
@@ -101,9 +100,9 @@
                         </div>
                     </fieldset>
                     <div class="d-flex justify-content-end mt-5">
-                        <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                        <button type="button" class="btn btn-light" onclick="editUserInfo()">Edit</button>
                         <span style="width: 10px"></span>
-                        <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+                        <button type="button" class="btn btn-dark" onclick="saveUserInfo()">Save</button>
                     </div>
                 </form>
             </div>
@@ -129,17 +128,32 @@
 
         <!-- <div><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></div> -->
 
+        <div id="edit-goals" style="margin-top: 30px;">
+            <div>
+                The number of times your are going to notifications per time block: <span
+                    id="habit-goals-number"></span>
+            </div>
+            <div>
+                The start time for getting notifications: <span id="habit-goals-startTime"></span>
+            </div>
+            <div>
+                The end time for getting notifications: <span id="habit-goals-endTime"></span>
+            </div>
+        </div>
+
+
+
         <div id="habit-part-2">
             <a href="./activities.html"><button type="button"
-                    class="btn btn-primary btn-lg btn-block">Activities</button></a>
+                    class="btn btn-primary btn-lg btn-dark">Activities</button></a>
         </div>
 
         <div id="habit-part-3">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Tips & Tricks</button>
+            <button type="button" class="btn btn-primary btn-lg btn-dark">Tips & Tricks</button>
         </div>
 
         <div id="habit-part-4">
-            <button type="button" class="btn btn-primary btn-lg btn-block">More Resources</button>
+            <button type="button" class="btn btn-primary btn-lg btn-dark">More Resources</button>
         </div>
 
     </div>
@@ -152,8 +166,9 @@
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM13.js"></script>
-    <script src="./scripts/skeleton.js"></script>
+    <!-- <script src="./scripts/skeleton.js"></script> -->
     <script src="./scripts/main.js"></script>
+    <script src="./habit.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
 
 
