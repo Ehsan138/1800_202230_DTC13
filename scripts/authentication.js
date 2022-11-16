@@ -22,7 +22,7 @@ var uiConfig = {
             start_time: 4,
             end_time: 10,
             // select from list of habits
-            addedhabits: "",
+            manualhabits: userAddedhabits,
             poortime: false,
             lacksleep: false,
             lackexercise: false,
