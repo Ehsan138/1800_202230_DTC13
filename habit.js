@@ -49,7 +49,7 @@ function populateInfo() {
 }
 
 //call the function to run it 
-populateInfo();
+// populateInfo();
 
 function editUserInfo() {
    //Enable the form fields
@@ -60,6 +60,12 @@ function saveUserInfo() {
     userNumber = document.getElementById('numberInput').value;       //get the value of the field with id="nameInput"
     userStart_time = document.getElementById('start_timeInput').value;     //get the value of the field with id="schoolInput"
     userEnd_time = document.getElementById('end_timeInput').value;       //get the value of the field with id="cityInput"
+
+    console.log(userNumber)
+
+    // let html = document.getElementById("numberInput").innerHTML;
+    // let habitEditGoals = document.getElementById("habit-part-1-goals");
+    // document.getElementById("habit-part-1-goals").innerHTML = html;
 
     currentUser.update({
                     number: userNumber,
