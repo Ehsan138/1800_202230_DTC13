@@ -62,6 +62,13 @@ function saveUserInfo() {
     userEnd_time = document.getElementById('end_timeInput').value;       //get the value of the field with id="cityInput"
 
     console.log(userNumber)
+    $("#habit-goals-number").text(userNumber);
+
+    console.log(userNumber)
+    $("#habit-goals-startTime").text(userStart_time);
+
+    console.log(userNumber)
+    $("#habit-goals-endTime").text(userEnd_time);
 
     // let html = document.getElementById("numberInput").innerHTML;
     // let habitEditGoals = document.getElementById("habit-part-1-goals");

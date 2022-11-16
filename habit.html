@@ -100,9 +100,9 @@
                         </div>
                     </fieldset>
                     <div class="d-flex justify-content-end mt-5">
-                        <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                        <button type="button" class="btn btn-light" onclick="editUserInfo()">Edit</button>
                         <span style="width: 10px"></span>
-                        <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+                        <button type="button" class="btn btn-dark" onclick="saveUserInfo()">Save</button>
                     </div>
                 </form>
             </div>
@@ -128,24 +128,32 @@
 
         <!-- <div><input type="submit" id="goal-submit" style="clear: both; margin-top: 30px;"></div> -->
 
-        <template id="habit-part-1-goals">
-            <h5 class="title">placeholder</h5>
-            <p class="number">placeholder</p>
-            <p class="start_time">placeholder</p>
-            <p class="end_time">placeholder</p>
-        </template>
+        <div id="edit-goals" style="margin-top: 30px;">
+            <div>
+                The number of times your are going to notifications per time block: <span
+                    id="habit-goals-number"></span>
+            </div>
+            <div>
+                The start time for getting notifications: <span id="habit-goals-startTime"></span>
+            </div>
+            <div>
+                The end time for getting notifications: <span id="habit-goals-endTime"></span>
+            </div>
+        </div>
+
+
 
         <div id="habit-part-2">
             <a href="./activities.html"><button type="button"
-                    class="btn btn-primary btn-lg btn-block">Activities</button></a>
+                    class="btn btn-primary btn-lg btn-dark">Activities</button></a>
         </div>
 
         <div id="habit-part-3">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Tips & Tricks</button>
+            <button type="button" class="btn btn-primary btn-lg btn-dark">Tips & Tricks</button>
         </div>
 
         <div id="habit-part-4">
-            <button type="button" class="btn btn-primary btn-lg btn-block">More Resources</button>
+            <button type="button" class="btn btn-primary btn-lg btn-dark">More Resources</button>
         </div>
 
     </div>
