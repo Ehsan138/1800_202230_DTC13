@@ -45,7 +45,7 @@ function test() {
             // navigate to a URL when clicked
             notification.addEventListener('click', () => {
     
-                window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
+                window.open('./main.html');
             });
         }
     
