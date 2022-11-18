@@ -36,14 +36,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <style>
+        html,body {
+            height: 100%;
+            width: 100%;
+        }
         body {
             background-image: url('../images/background6.jpg');
-
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
             text-align: center;
         }
+        #content{
+            width: 60%;
+            margin: auto;
+            height: 200px;
+            border-radius: 10%;
+            background-color: white;
+        }
+
+
     </style>
 </head>
 
@@ -67,6 +79,15 @@
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
+    <div id ="content">
+        <br>
+        <b style="font-size: 20px">Session ended</b>
+        <hr>
+        <a href="./index.html">
+            <button class="btn btn-primary btn-lg">Click</button>
+        </a>
+    </div>
+
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>

@@ -80,28 +80,34 @@
         <b><u>Account</u></b>
 
         <div id="profile">
-        <a href="profile_page.html" style="color: black; text-decoration: none;">
+        <!-- <a href="profile_page.html" style="color: black; text-decoration: none;"> -->
         <i class="material-icons md-48">account_circle</i>
-        &nbsp;Profile</a>&nbsp;
+        &nbsp;Profile
+    <!-- </a>&nbsp; -->
         </div>
 
-        <div id="logout">
+        <div onclick="myFunction()">
         <a href="logout_page.html" style="color: black; text-decoration: none;">
         <i class="material-icons md-48">logout</i>
         &nbsp;Logout
-        </a></div>  
+        </a>
+        </div>  
        </div>
 
 
 
        <div class="content">
         <b><u>Reminders</u></b>
-        <div id = "reminders">
-        Reminders &nbsp;
-        <i class="material-icons md-98" onclick="reminders" id="toggle">toggle_on</i>
+        <div class="container">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="notifications" checked="">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Notifications</label>
+            </div>
+            <button type="button" class="btn btn-info" onclick="saveSettings()">Save</button>
         </div>
-        <br><br>
        </div>
+
+       
 
    
        <div class="content">
@@ -140,17 +146,10 @@
         </div>
     </div>
 
-<script>
-function reminders(){
-    var x = document.getElementById("toggle");
-    if (x.style.display === "none") {
-    x.style.display = "block";
-    } else {
-    x.style.display = "none";
-    }
-}
-
-</script>
+    
+    <!-- <script src="./settings.js"></script> -->
+    <script src="./settings.js"></script>
+    
 
 </body>
 
