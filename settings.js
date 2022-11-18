@@ -9,6 +9,77 @@ function saveSettings() {
     })
 }
 
+function showSettings() {
+    firebase.auth().onAuthStateChanged(user => {
+            db.collection("users").doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    nstatus = doc.data().notifications;
+                    console.log("notfications is: " + nstatus);
+                    document.getElementById("notifications").checked = nstatus;
+
+                })
+    })
+}
+
+showSettings
+
+
+
+
+function test() {
+    (async () => {
+        // create and show the notification
+        const showNotification = () => {
+            // create a new notification
+            const notification = new Notification('habitory.com', {
+                body: 'This is a JavaScript Notification API demo',
+                icon: './img/js.png'
+            });
+    
+            // close the notification after 10 seconds
+            setTimeout(() => {
+                notification.close();
+            }, 10 * 1000);
+    
+            // navigate to a URL when clicked
+            notification.addEventListener('click', () => {
+    
+                window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
+            });
+        }
+    
+        // show an error message
+        const showError = () => {
+            const error = document.querySelector('.error');
+            error.style.display = 'block';
+            error.textContent = 'You blocked the notifications';
+        }
+    
+        // check notification permission
+        let granted = false;
+    
+        if (Notification.permission === 'granted') {
+            granted = true;
+        } else if (Notification.permission !== 'denied') {
+            let permission = await Notification.requestPermission();
+            granted = permission === 'granted' ? true : false;
+        }
+    
+        // show notification or error
+        granted ? showNotification() : showError();
+
+        // Open
+    })();
+    
+  }
+  let btn = document.getElementById("btn");
+  btn.addEventListener('click', event => {
+    test();
+  });
+
+
+
 //Logout
 function myFunction() {
     // [START auth_sign_out]
@@ -20,17 +91,7 @@ function myFunction() {
     // [END auth_sign_out]
   }
 
+ 
 
 
-
-function showSettings() {
-    firebase.auth().onAuthStateChanged(user => 
-            db.collection("users").doc(user.uid0
-                .get()
-                .then(function (doc) {
-                    console.log("notfications is: " + doc.data().notifications);
-                })
-    })
-
-showSettings();
 
