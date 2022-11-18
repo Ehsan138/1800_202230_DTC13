@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-image: url('./images/sunset_categorize.jpg');
+    background-image: url('./images/background7.jpg');
     background-size: cover;
 }
 
@@ -67,10 +67,6 @@ i:hover {
 @media screen and (max-width: 500px) {
     .navbar2 {
         display: none;
-    }
-
-    .navbar {
-        background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
     }
 
     .form-check {
