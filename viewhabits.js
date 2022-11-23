@@ -8,9 +8,9 @@ function populateHabits() {
     let message = "Here are your submitted habits:" + habitEntered;
     console.log("hello")
 
-    db.collection("users").where("code", "==", habitEntered).get()
+    db.collection("users").where("poortime", "==", true).get()
         .then(allHabits => {
-            habits = allHabits
+            const habits = allHabits.docs
             console.log(habits);
             habits.forEach(doc => {
                 const poortime = doc.data().poortime; //gets the name field
