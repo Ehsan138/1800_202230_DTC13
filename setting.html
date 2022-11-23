@@ -98,13 +98,14 @@
 
        <div class="content">
         <b><u>Reminders</u></b>
+
         <div class="container">
+            <div id="btn">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="notifications" checked="">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Notifications</label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Notifications</label>
             </div>
-            <button type="button" class="btn btn-info" onclick="saveSettings()">Save</button>
-            <button type="button" class="btn btn-info" id="btn">Notifications</button>
+        </div>
         </div>
        </div>
 
@@ -129,7 +130,6 @@
 
     </div>
 
-    <button type="button" onclick="insertName()">Button</button>
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
 
@@ -150,7 +150,7 @@
         </div>
     </div>
 
-
+    
     
     <!-- <script src="./settings.js"></script> -->
     <script src="./settings.js"></script>

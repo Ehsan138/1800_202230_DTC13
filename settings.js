@@ -33,14 +33,13 @@ function test() {
         const showNotification = () => {
             // create a new notification
             const notification = new Notification('habitory.com', {
-                body: 'This is a JavaScript Notification API demo',
-                icon: './img/js.png'
+                body: 'Go back to habit',
             });
     
-            // close the notification after 10 seconds
+            // close the notification after 5 seconds
             setTimeout(() => {
                 notification.close();
-            }, 10 * 1000);
+            }, 5 * 1000);
     
             // navigate to a URL when clicked
             notification.addEventListener('click', () => {
@@ -73,9 +72,23 @@ function test() {
     })();
     
   }
+  var i = 1;                  
+
+  function myLoop() {         
+    setTimeout(function() {   
+      test();   
+      i++;            
+      if (i < 5) {         
+        myLoop();            
+      }            
+    }, 20000)                     
+  }
+
+
+
   let btn = document.getElementById("btn");
   btn.addEventListener('click', event => {
-    test();
+    myLoop();
   });
 
 
@@ -118,8 +131,8 @@ function deleteUserById() {
         if (user) {
             currentUser = user.uid; // will to to the firestore and go to the document of the user
             console.log(currentUser)
+            db.collection('users').doc('user.uid').delete();
             firebase.auth().currentUser.delete()
-            db.collection("users").doc(currentUser).delete()
             // getAuth()
             //     .deleteUser(uid)
             //     .then(() => {
