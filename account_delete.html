@@ -34,16 +34,28 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="./style.css" />
     <style>
+        html,body {
+            height: 100%;
+            width: 100%;
+        }
         body {
-            background-image: url('../images/background2.jpg');
-
+            background-image: url('../images/background6.jpg');
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
             text-align: center;
         }
+        #content{
+            width: 60%;
+            margin: auto;
+            height: 200px;
+            border-radius: 10%;
+            background-color: white;
+        }
+
+
     </style>
 </head>
 
@@ -65,71 +77,18 @@
         </nav>
     </nav>
 
-     <!--HEADING-->
-     <div class="heading">
-        <i class="material-icons md-48" style="font-size: 45px; float: left;"><a
-                style="color: white; text-decoration: none;" href="./main.html">arrow_back_ios</a></i>
-    </div>
-
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div class="welcome_middle">
-
-
-       <div class="content" style="margin-top: 50px;">
-        <b><u>Account</u></b>
-
-        <div id="profile">
-        <a href="profile_page.html" style="color: black; text-decoration: none;">
-        <i class="material-icons md-48">account_circle</i>
-        &nbsp;Profile
-        </a>&nbsp;
-        </div>
-
-        <div onclick="myFunction()">
-        <a href="logout_page.html" style="color: black; text-decoration: none;">
-        <i class="material-icons md-48">logout</i>
-        &nbsp;Logout
+    <div id ="content">
+        <br>
+        <b style="font-size: 20px">Account Deleted</b>
+        <hr>
+        <a href="./index.html">
+            <button class="btn btn-primary btn-lg">Click</button>
         </a>
-        </div>  
-       </div>
-
-
-
-       <div class="content">
-        <b><u>Reminders</u></b>
-        <div class="container">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="notifications" checked="">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Notifications</label>
-            </div>
-            <button type="button" class="btn btn-info" onclick="saveSettings()">Save</button>
-            <button type="button" class="btn btn-info" id="btn">Notifications</button>
-        </div>
-       </div>
-
-       
-
-   
-       <div class="content">
-        <b><u>Other</u></b>
-        <a href="account_delete.html" style="color: black; text-decoration: none;">
-        <div id="Delete_Account" onclick="deleteUserById()">
-        <i class="material-icons md-98">delete</i>
-        &nbsp;Delete Account
-        </a></div>
-        
-
-        <div id="support">
-        <i class="material-icons md-98">contact_support</i>
-        &nbsp;Support
-        <br><br>
-        </div>
-       </div>
-
     </div>
 
-    <button type="button" onclick="insertName()">Button</button>
+
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
 
@@ -149,13 +108,6 @@
             </div>
         </div>
     </div>
-
-
-    
-    <!-- <script src="./settings.js"></script> -->
-    <script src="./settings.js"></script>
-    <script src="./scripts/firebaseAPI_TEAM13.js"></script>
-    
 
 </body>
 
