@@ -8,32 +8,35 @@ function populateHabits() {
     let message = "Here are your submitted habits:" + habitEntered;
     console.log("hello")
 
-    db.collection("users").where("poortime", "==", true).get()
-        .then(allHabits => {
-            const habits = allHabits.docs
-            console.log(habits);
-            habits.forEach(doc => {
-                const poortime = doc.data().poortime; //gets the name field
-                const lacksleep = doc.data().lacksleep; //gets the unique ID field
-                const lackexercise = doc.data().lackexercise;
-                const lackwater = doc.data().lackwater; //gets the length field
-                const lackposture = doc.data().lackposture;
-                const phoneaddiction = doc.data().phoneaddiction;
-                const gameaddiction = doc.data().gameaddiction;
-                const gamblingaddiction = doc.data().gamblingaddiction;
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            db.collection("users").doc(user.uid).get().then(
+                doc => {
+                    const poortime = doc.data().poortime; //gets the name field
+                    const lacksleep = doc.data().lacksleep; //gets the unique ID field
+                    const lackexercise = doc.data().lackexercise;
+                    const lackwater = doc.data().lackwater; //gets the length field
+                    const lackposture = doc.data().lackposture;
+                    const phoneaddiction = doc.data().phoneaddiction;
+                    const gameaddiction = doc.data().gameaddiction;
+                    const gamblingaddiction = doc.data().gamblingaddiction;
 
-                let habitCard = habitCardTemplate.content.cloneNode(true);
-                habitCard.querySelector('.poortime').innerHTML = `poortime: ${poortime}`;
-                habitCard.querySelector('.lacksleep').innerHTML = `lacksleep: ${lacksleep}`;
-                habitCard.querySelector('.lackexercise').innerHTML = `lackexercise: ${lackexercise}`;
-                habitCard.querySelector('.lackwater').innerHTML = `lackwater: ${lackwater}`;
-                habitCard.querySelector('.lackposture').innerHTML = `lackposture: ${lackposture}`;
-                habitCard.querySelector('.phoneaddiction').innerHTML = `phoneaddiction: ${phoneaddiction}`;
-                habitCard.querySelector('.gameaddiction').innerHTML = `gameaddiction: ${gameaddiction}`;
-                habitCard.querySelector('.gamblingaddiction').innerHTML = `gamblingaddiction: ${gamblingaddiction}`;
-                habitCardGroup.appendChild(habitCard);
-            })
-        })
+                    let habitCard = habitCardTemplate.content.cloneNode(true);
+                    habitCard.querySelector('.poortime').innerHTML = `poortime: ${poortime}`;
+                    habitCard.querySelector('.lacksleep').innerHTML = `lacksleep: ${lacksleep}`;
+                    habitCard.querySelector('.lackexercise').innerHTML = `lackexercise: ${lackexercise}`;
+                    habitCard.querySelector('.lackwater').innerHTML = `lackwater: ${lackwater}`;
+                    habitCard.querySelector('.lackposture').innerHTML = `lackposture: ${lackposture}`;
+                    habitCard.querySelector('.phoneaddiction').innerHTML = `phoneaddiction: ${phoneaddiction}`;
+                    habitCard.querySelector('.gameaddiction').innerHTML = `gameaddiction: ${gameaddiction}`;
+                    habitCard.querySelector('.gamblingaddiction').innerHTML = `gamblingaddiction: ${gamblingaddiction}`;
+                    habitCardGroup.appendChild(habitCard);
+                }
+
+
+            )
+        }
+    })
 }
 populateHabits();
 console.log("hello2")
