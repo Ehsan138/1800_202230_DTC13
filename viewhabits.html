@@ -64,6 +64,31 @@
         </nav>
     </nav>
 
+    <br>
+
+    <!-- Here is container for cards  -->
+    <div class="container">
+        <div id="habitCardGroup" class="row row-cols-auto">
+        </div>
+    </div>
+
+
+    <template id="habitCardTemplate">
+        <div class="card">
+            <div class="card-body">
+                <p class="poortime">placeholder</p>
+                <p class="lacksleep">placeholder</p>
+                <p class="lackexercise">placeholder</p>
+                <p class="lackwater">placeholder</p>
+                <p class="lackposture">placeholder</p>
+                <p class="phoneaddiction">placeholder</p>
+                <p class="gameaddiction">placeholder</p>
+                <p class="gamblingaddiction">placeholder</p>
+                <br>
+            </div>
+        </div>
+    </template>
+
     <!-- the body of your page goes here -->
     <div class="card text-center">
         <div class="card-header">
@@ -75,13 +100,6 @@
             <a href="main.html" class="btn btn-primary">Review Habits</a>
         </div>
     </div>
-
-
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
-
-
-
 
     <!--Sticky Footer (bottom navbar)-->
     <div class="bottom-nav">
@@ -96,6 +114,13 @@
             </div>
         </div>
     </div>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="./scripts/firebaseAPI_TEAM13.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./viewhabits.js"></script>
 
 </body>
 

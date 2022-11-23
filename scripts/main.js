@@ -43,44 +43,71 @@ $("button").click(function(){
 
 
 
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        getBookmarks(user)
-    } else {
-        console.log("No user is signed in");
-    }
-});
+// firebase.auth().onAuthStateChanged(user => {
+//     if (user) {
+//         getHabits(user)
+//         console.log('hello')
+//     } else {
+//         console.log("No user is signed in");
+//     }
+// });
 
 
 
 
-function getHabits(user) {
-    db.collection("users").doc(user.uid).get()
-        .then(userDoc => {
-                user.id.forEach(thisHabitID => {
-                console.log(thisHabitID);
+// function getHabits(user) {
+//     db.collection("users").doc(user.uid).get()
+//         .then(userDoc => {
+//                 user.id.forEach(thisHabitID => {
+//                 console.log(thisHabitID);
 
-                db.collection("habits").where("code", "==", thisHabitID).get().then(snap => {
-                    bool = snap.bool;
-                    queryData = snap.docs;
+//                 db.collection("habits").where("code", "==", thisHabitID).get().then(snap => {
+//                     bool = snap.bool;
+//                     queryData = snap.docs;
                     
-                    if (bool == true) {
-                        var doc = queryData[0].data();
-                        var habitName = doc.name
-                        var habitDescription = doc.description
-                        let newCard = CardTemplate.content.cloneNode(true);
-                        newCard.querySelector('.card-title').innerHTML = habitName;
-                        newCard.querySelector('.card-text').innerHTML = habitDescription;
-                        habitCardGroup.appendChild(newCard);
-                    } else {
-                        console.log("Query has more than one data")
-                    }
+//                     if (bool == true) {
+//                         var doc = queryData[0].data();
+//                         var habitName = doc.name
+//                         var habitDescription = doc.description
+//                         let newCard = CardTemplate.content.cloneNode(true);
+//                         newCard.querySelector('.card-title').innerHTML = habitName;
+//                         newCard.querySelector('.card-text').innerHTML = habitDescription;
+//                         habitCardGroup.appendChild(newCard);
+//                     } else {
+//                         console.log("Query has more than one data")
+//                     }
 
-                })
+//                 })
 
-            });
-        })
-}
+//             });
+//         })
+// }
+
+
+
+// function getHabits(user) {
+//     db.collection("users").doc(user.uid).get()
+//         .then(userDoc => {
+//             var userInfo = userDoc.data()
+
+//             userInfo.forEach(thisHabitID => {
+//             console.log(thisHabitID);
+
+//                 if (thisHabitID == true) {
+//                     var habitInfo = userInfo.thisHabitID
+//                     let newCard = CardTemplate.content.cloneNode(true);
+//                     newCard.querySelector('.card-title').innerHTML = habitInfo;
+//                     habitCardGroup.appendChild(newCard);
+//                 } else {
+//                     console.log("Query has more than one data")
+//                 }
+
+//                 });
+//         })
+// }
+
+// getHabits()
+// console.log('hello')
 
 
 
@@ -92,8 +119,8 @@ function getHabits(user) {
 //             console.log(bookmarks);
 
 //             let CardTemplate = document.getElementById("CardTemplate");
-//             bookmarks.forEach(thisHikeID => {
-//                 console.log(thisHikeID);
+//                 bookmarks.forEach(thisHikeID => {
+//                     console.log(thisHikeID);
 //                 db.collection("hikes").where("code", "==", thisHikeID).get().then(snap => {
 //                     size = snap.size;
 //                     queryData = snap.docs;
