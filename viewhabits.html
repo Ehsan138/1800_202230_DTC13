@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="comp1800 template" content="My 1800 App" />
+    <title>MyHabit</title>
+    <meta name="comp1800 template" content="MyHabit" />
 
     <!------------------------>
     <!-- Required meta tags -->
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="./viewhabits.css" />
     <style>
         body {
-            background-image: url('../images/background7.jpg');
+            background-image: url('../images/background6.jpg');
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
@@ -72,6 +72,17 @@
         </div>
     </div>
 
+    <!-- the body of your page goes here -->
+    <div class="card text-center">
+        <div class="card-header">
+            Your habits have been entered successfully.
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Thank you for choosing you. Here are the habits you selected:</h5>
+            <p class="card-text"></p>
+            <a href="main.html" class="btn btn-primary">Review Habits</a>
+        </div>
+    </div>
 
     <template id="habitCardTemplate">
         <div class="card">
@@ -88,18 +99,6 @@
             </div>
         </div>
     </template>
-
-    <!-- the body of your page goes here -->
-    <div class="card text-center">
-        <div class="card-header">
-            Your habits have been entered successfully.
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Thank you for choosing you. Let's set some goals for your habits.</h5>
-            <p class="card-text"></p>
-            <a href="main.html" class="btn btn-primary">Review Habits</a>
-        </div>
-    </div>
 
     <!--Sticky Footer (bottom navbar)-->
     <div class="bottom-nav">
