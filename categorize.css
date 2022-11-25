@@ -1,9 +1,11 @@
 html,
 body {
-    height: 100%;
-    width: 100%;
-    background-image: url('./images/background7.jpg');
-    background-size: cover;
+    background-image: url('../images/background6.jpg');
+    background-size: fill;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: center;
 }
 
 .text_welcome {
@@ -29,22 +31,8 @@ i:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.content {
-    background-color: white;
-    padding: 15px;
-    width: 70%;
-    border-radius: 5px;
-    margin: auto;
-}
-
 .navbar-light .navbar-brand {
     color: white;
-}
-
-.btn {
-    background-color: white;
-    color: black;
-
 }
 
 .heading {
@@ -53,16 +41,11 @@ i:hover {
     overflow: hidden;
 }
 
+
 .form-check {
     min-width: 100%;
     min-height: 100%;
-    text-align: center;
 }
-
-.select-btn {
-    text-align: center;
-}
-
 
 @media screen and (max-width: 500px) {
     .navbar2 {
@@ -71,6 +54,6 @@ i:hover {
 
     .form-check {
         width: 95%;
+        padding-left: 30px;
     }
-
 }
