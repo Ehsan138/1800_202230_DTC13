@@ -25,6 +25,7 @@ function insertEmail() {
         if (user) {
             console.log(user.uid); // let me to know who is the user that logged in to get the UID
             currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
+            console.log(currentUser)
             currentUser.get().then(userDoc => {
                 //get the user name
                 var user_Email = userDoc.data().email;

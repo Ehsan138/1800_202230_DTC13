@@ -19,7 +19,7 @@ function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
         if (user) {
-
+            
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             //get the document for current user.
@@ -64,17 +64,25 @@ function saveUserInfo() {
     console.log(userNumber)
     $("#habit-goals-number").text(userNumber);
 
-    console.log(userNumber)
+    console.log(userStart_time)
     $("#habit-goals-startTime").text(userStart_time);
 
-    console.log(userNumber)
+    console.log(userEnd_time)
     $("#habit-goals-endTime").text(userEnd_time);
 
     // let html = document.getElementById("numberInput").innerHTML;
     // let habitEditGoals = document.getElementById("habit-part-1-goals");
     // document.getElementById("habit-part-1-goals").innerHTML = html;
 
-    currentUser.update({
+
+    firebase.auth().onAuthStateChanged(user => {
+        // Check if user is signed in:
+        if (user) {
+            
+            //go to the correct user document by referencing to the user uid
+            currentUser = db.collection("users").doc(user.uid)
+            console.log(currentUser)
+            currentUser.update({
                     number: userNumber,
                     start_time: userStart_time,
                     end_time: userEnd_time
@@ -84,4 +92,7 @@ function saveUserInfo() {
                 })
 
                 document.getElementById('personalInfoFields').disabled = true;
-}
+}}
+    )}
+
+    
