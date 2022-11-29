@@ -24,7 +24,7 @@ function showSettings() {
  
 showSettings
  
- 
+
  
  
 // Notification
@@ -87,11 +87,11 @@ function test() {
  
  
  
-  let btn = document.getElementById("btn");
-  btn.addEventListener('click', event => {
+let btn = document.getElementById("btn");
+btn.addEventListener('click', event => {
     console.log('gi')
     myLoop();
-  });
+});
  
  
  
@@ -118,7 +118,10 @@ function new23(){
     firebase.auth().currentUser.delete()    
 }
  
- 
+function window(){
+    window.location = "https://www.google.com";
+    window.location.href = "https://www.google.com";
+}
  
 function deleteUserById() {
     // to check if the user is logged in:
@@ -129,6 +132,7 @@ function deleteUserById() {
             db.collection('users').doc(currentUser).delete();
             new23()
             alert("Account deleted logout")
+            window()
         }
     }
     )
