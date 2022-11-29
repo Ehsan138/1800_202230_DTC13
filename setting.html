@@ -17,8 +17,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -79,10 +79,11 @@
     <!-- stuff -->
     <div class="welcome_middle">
 
-
+        <!-- Content container 1 -->
         <div class="content" style="margin-top: 50px; text-decoration: none;">
             <b>Account</b>
 
+            <!-- Profile icon -->
             <div id="profile">
                 <a href="profile_page.html" style="color: black; text-decoration: none;">
                     <i class="material-icons md-48">account_circle</i>
@@ -90,6 +91,7 @@
                 </a>&nbsp;
             </div>
 
+            <!-- logout icon -->
             <div onclick="myFunction()">
                 <a href="logout_page.html" style="color: black; text-decoration: none;">
                     <i class="material-icons md-48">logout</i>
@@ -99,16 +101,17 @@
         </div>
 
 
-
+        <!-- Content container 2 -->
         <div class="content">
             <b>Reminders</b>
 
+            <!-- Notifications icon -->
             <div class="container">
                 <div id="btn">
                     <!-- <div class="form-check form-switch" > -->
-                        <!-- <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
-                        <i class="material-icons md-48">notifications </i>
-                        <label class="form-check-label" for="flexSwitchCheckDefault">&nbsp;Notifications</label>
+                    <!-- <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+                    <i class="material-icons md-48">notifications </i>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">&nbsp;Notifications</label>
                     <!-- </div> -->
                 </div>
             </div>
@@ -116,17 +119,18 @@
 
 
 
-
+        <!-- Content container 3 -->
         <div class="content">
             <b>Other</b>
             <br>
+            <!-- Delete icon -->
             <div onclick="deleteUserById()">
                 <i class="material-icons md-98">delete</i>
                 &nbsp;Delete Account
             </div>
 
 
-
+            <!-- Support icon -->
             <div id="support">
                 <a href="mailto: myhabitbcit@gmail.com" style="text-decoration: none; color: black">
                     <i class="material-icons md-98">contact_support</i>
