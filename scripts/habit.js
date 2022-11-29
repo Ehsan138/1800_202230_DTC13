@@ -1,19 +1,21 @@
-function goalEditHandler() {
-  x = $("#goal-textarea").val()
-  x = String(x)
-  $("#card-text").html(x)
-}
+// function goalEditHandler() {
+//   x = $("#goal-textarea").val()
+//   x = String(x)
+//   $("#card-text").html(x)
+// }
 
 
-function setup() {
-  $("#goal-submit").click(goalEditHandler)
-}
+// function setup() {
+//   $("#goal-submit").click(goalEditHandler)
+// }
 
 
-$(document).ready(setup)
+// $(document).ready(setup)
 
 
 var currentUser;        //put this right after you start script tag before writing any functions.
+
+// Ask the users about their goals and how they want to get notifications.
 
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
@@ -56,6 +58,8 @@ function editUserInfo() {
    document.getElementById('personalInfoFields').disabled = false;
 }
 
+// Saving the user answers in the firestore
+
 function saveUserInfo() {
     userNumber = document.getElementById('numberInput').value;       //get the value of the field with id="nameInput"
     userStart_time = document.getElementById('start_timeInput').value;     //get the value of the field with id="schoolInput"
@@ -70,10 +74,6 @@ function saveUserInfo() {
     console.log(userEnd_time)
     $("#habit-goals-endTime").text(userEnd_time);
 
-    // let html = document.getElementById("numberInput").innerHTML;
-    // let habitEditGoals = document.getElementById("habit-part-1-goals");
-    // document.getElementById("habit-part-1-goals").innerHTML = html;
-
 
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
@@ -82,7 +82,7 @@ function saveUserInfo() {
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             console.log(currentUser)
-            currentUser.update({
+            currentUser.update({ // updating the firestore based on the answers we got from users
                     number: userNumber,
                     start_time: userStart_time,
                     end_time: userEnd_time

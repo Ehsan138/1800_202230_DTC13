@@ -4,16 +4,6 @@ body {
     width: 100%;
 }
 
-
-/* .welcome_middle {
-    background-image: url('../images/background2.jpg');
-
-    background-size: cover;
-    min-width: 100%;
-    min-height: 100%;
-    text-align: center;
-} */
-
 .text_welcome {
     padding: 70px;
     font-size: 70px;
@@ -43,28 +33,3 @@ body {
     font-family: serif;
     text-decoration: none;
 }
-
-/* .all-habits{
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-    max-width: 60%;
-} */
-
-/* .habit-card {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
-    text-decoration: none;
-    background-color: rgb(229, 229, 229);
-} */
-
-
-/* #habit-part-1, 
-#habit-part-2, 
-#habit-part-3,
-#habit-part-4 {
-    text-align: center;
-    margin-bottom: 50px;
-} */
-
