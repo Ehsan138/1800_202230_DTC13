@@ -110,7 +110,7 @@ function deleteUserById() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             currentUser = user.uid
-            // alert("Account was deleted")
+            alert("Account was deleted")
             console.log(currentUser)
             db.collection('users').doc(currentUser).delete();
             console.log(db.collection('users').doc(currentUser))
