@@ -37,7 +37,7 @@ body {
 }
 
 .habit-card {
-    padding: 70px;
+    /* padding: 70px; */
     font-size: 30px;
     color: white;
     font-family: serif;
