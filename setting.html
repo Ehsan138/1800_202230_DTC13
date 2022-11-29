@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <title>My BCIT Project</title>
     <meta name="comp1800 template" content="My 1800 App" />
- 
+
     <!------------------------>
     <!-- Required meta tags -->
     <!------------------------>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
+
     <!------------------------------------------>
     <!-- Bootstrap Library CSS JS CDN go here -->
     <!------------------------------------------>
@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
- 
+
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
@@ -29,16 +29,19 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
- 
+
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/settings.css">
     <style>
         body {
             background-image: url('./images/background6.jpg');
- 
+
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
@@ -46,12 +49,12 @@
         }
     </style>
 </head>
- 
+
 <body>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
- 
+
     <!-- our own navbar goes here -->
     <nav id="navbarPlaceholder">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark py-3">
@@ -64,13 +67,13 @@
             </div>
         </nav>
     </nav>
- 
-     <!--HEADING-->
-     <div class="heading">
+
+    <!--HEADING-->
+    <div class="heading">
         <i class="material-icons md-48" style="font-size: 45px; float: left;"><a
                 style="color: white; text-decoration: none;" href="./main.html">arrow_back_ios</a></i>
     </div>
- 
+
     <!-- the body of your page goes here -->
     <!-- stuff -->
     <div class="welcome_middle">
@@ -106,40 +109,55 @@
                 <label class="form-check-label" for="flexSwitchCheckDefault">Notifications</label>
             </div>
         </div>
+
+
+
+        <div class="content">
+            <b><u>Reminders</u></b>
+
+            <div class="container">
+                <div id="btn">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Notifications</label>
+                    </div>
+                </div>
+            </div>
         </div>
-       </div>
- 
-       
- 
-   
-       <div class="content">
-        <b><u>Other</u></b>
-        <br>
-        <div onclick="deleteUserById()">
-        <i class="material-icons md-98">delete</i>
-        &nbsp;Delete Account
+
+
+
+
+        <div class="content">
+            <b><u>Other</u></b>
+            <br>
+            <div onclick="deleteUserById()">
+                <i class="material-icons md-98">delete</i>
+                &nbsp;Delete Account
+            </div>
+
+
+
+            <div id="support">
+                <a href="mailto: myhabitbcit@gmail.com" style="text-decoration: none; color: black">
+                    <i class="material-icons md-98">contact_support</i>
+                </a>
+                &nbsp;Support
+                <br><br>
+            </div>
         </div>
- 
-       
- 
-        <div id="support">
-        <a href="mailto: myhabitbcit@gmail.com" style="text-decoration: none; color: black">
-        <i class="material-icons md-98">contact_support</i>
-        </a>
-        &nbsp;Support
-        <br><br>
-        </div>
-       </div>
- 
+
     </div>
- 
+
+    <a href="./login.html"><button onclick="deleteUserById()"></button></a>
+
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
- 
- 
- 
- 
- 
+
+
+
+
+
     <!--Sticky Footer (bottom navbar)-->
     <div class="bottom-nav">
         <div class="navbar justify-content-evenly fixed-bottom py-3 bg-dark">
@@ -153,14 +171,14 @@
             </div>
         </div>
     </div>
- 
-   
-   
+
+
+
     <!-- <script src="./settings.js"></script> -->
     <script src="./scripts/settings.js"></script>
     <script src="./scripts/firebaseAPI_TEAM13.js"></script>
-   
- 
+
+
 </body>
- 
+
 </html>

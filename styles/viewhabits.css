@@ -53,10 +53,8 @@ i:hover {
     overflow: hidden;
 }
 
-.card-body {
-    min-width: 100%;
-    min-height: 100%;
-    text-align: center;
+.card {
+    margin: 0 auto;
 }
 
 .select-btn {
