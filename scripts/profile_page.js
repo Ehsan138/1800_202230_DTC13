@@ -1,6 +1,7 @@
 // insertName reads the database and returns the user name
 // pram: none
 // return: none
+// R (read) user name from the firestore
 function insertName() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
@@ -26,6 +27,7 @@ insertName();
 // insertEmail reads the database and returns the user email
 // pram: none
 // return: none
+// R (read) user email from the firestore
 function insertEmail() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
@@ -49,6 +51,7 @@ insertEmail();
 // insertSchool reads the database and returns the users school
 // pram: none
 // return: none
+// R (read) user school from the firestore
 function insertSchool() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {

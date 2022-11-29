@@ -93,6 +93,7 @@ function myFunction() {
 // deleteFromFirebase deletes user from the firebase auth and sends an alert warning them of this change
 // return: none
 // pram : none
+// D (delete) all user account
 function new23() {
     console.log(currentUser)
     firebase.auth().currentUser.delete()
@@ -102,6 +103,7 @@ function new23() {
 // deleteUserById deletes the user from the firestore and then call the deleteFromFirebase() function
 // return: none
 // pram: none
+// D (delete) all user info on firestore
 function deleteUserById() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
