@@ -1,4 +1,4 @@
-## My Web Application (Add your Title here)
+## MyHabit (1800 PROJECTS)
 
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -6,11 +6,13 @@
 
 ## General Info
 
-This browser based web application to ...
+This browser based web application belongs to ...
 
 * Hi my name is Annette. I'm excited about this project because we can make our own app! :)
 * Hi my name is Ehsan, and I'm excited about this project.
 * Hi my name is jaskarn, and I'm excited about this project.
+
+Our app in a nutshell: Our team is developing a web application to help people who have difficulties managing their habits by providing helpful features, such as reminders and stats based on users' data.
  
 ## Technologies
 
