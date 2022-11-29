@@ -95,6 +95,7 @@ function myFunction() {
 // pram : none
 // D (delete) all user account
 function new23() {
+    db.collection('users').doc(currentUser).delete();
     console.log(currentUser)
     firebase.auth().currentUser.delete()
 }
@@ -109,7 +110,7 @@ function deleteUserById() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             currentUser = user.uid
-            alert("Account was deleted")
+            // alert("Account was deleted")
             console.log(currentUser)
             db.collection('users').doc(currentUser).delete();
             console.log(db.collection('users').doc(currentUser))
