@@ -23,6 +23,29 @@ Technologies used for this project:
 * Bootstrap
 * API
 
+## References 
+* API for generating random quotes: 
+https://api.forismatic.com/api/1.0/?
+
+* Libraries:
+https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js
+https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js
+https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js
+https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js
+https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css
+https://fonts.googleapis.com/icon?family=Material+Icons
+https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap
+https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Quicksand&display=swap
+
+* Images:
+https://unsplash.com/
+
+* Logo:
+https://looka.com/logo-maker/
+
  
 ## Content
 
@@ -70,7 +93,8 @@ styles                   # Folder for styles
     /logincss.css                
     /main.css                
     /select.css                
-    /viewhabits.css                               
+    /viewhabits.css 
+                       
 
 Firebase hosting files: 
 .firebaserc...
