@@ -1,42 +1,17 @@
-function saveSettings() {
-    firebase.auth().onAuthStateChanged(user => {   //find out who's logged in
-        console.log("in save function");
-        const n = document.querySelector('#notifications');
-        console.log(n.checked);      //get checked attribute
-        db.collection("users").doc(user.uid).update({   //update user's doc
-            notifications: n.checked
-        })
-    })
-}
- 
-function showSettings() {
-    firebase.auth().onAuthStateChanged(user => {
-            db.collection("users").doc(user.uid)
-                .get()
-                .then(function (doc) {
-                    nstatus = doc.data().notifications;
-                    console.log("notfications is: " + nstatus);
-                    document.getElementById("notifications").checked = nstatus;
- 
-                })
-    })
-}
- 
-showSettings
- 
- 
- 
+
  
 // Notification
 function test() {
+    console.log('in');
     (async () => {
         // create and show the notification
         const showNotification = () => {
+            
+            console.log('in2');
             // create a new notification
             const notification = new Notification('habitory.com', {
                 body: 'Go back to habit',
             });
-   
             // close the notification after 5 seconds
             setTimeout(() => {
                 notification.close();
@@ -75,14 +50,16 @@ function test() {
   }
   var i = 1;                  
  
-  function myLoop() {        
-    setTimeout(function() {  
+function myLoop() {
+    console.log('ii');        
+    setTimeout(function() { 
+      console.log('hi');
       test();  
       i++;            
       if (i < 5) {        
         myLoop();            
       }            
-    }, 20000)                    
+    }, 10000)                    
   }
  
  
