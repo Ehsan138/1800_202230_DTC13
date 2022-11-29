@@ -1,16 +1,17 @@
-var currentUser;        //put this right after you start script tag before writing any functions.
+var currentUser;        // global variable 
 
+// This function populates the user's information and checks if they are logged in.
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
         if (user) {
 
-            //go to the correct user document by referencing to the user uid
+            // Go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
-            //get the document for current user.
+            // Get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    //get the data fields of the user
+                    // Get the data fields of the user
                     var userAddedhabits = userDoc.data().addedhabits;
                     if (userAddedhabits != null) {
                         document.getElementById("addedhabits").value = userAddedhabits;
@@ -23,32 +24,8 @@ function populateInfo() {
     });
 }
 
-// //call the function to run it 
-// populateInfo();
-
-function editHabit() {
-    //Enable the form fields
-    document.getElementById('personalInfoFields').disabled = false;
-}
-
-function saveHabit() {
-    userAddedhabits = document.getElementById('addedhabits').value;
-
-    console.log(userAddedhabits)
-    $("#addedhabits").text(userAddedhabits);
-
-    currentUser.update({
-        manualhabits: userAddedhabits
-    })
-        .then(() => {
-            console.log("Document successfully updated!");
-        })
-
-    document.getElementById('personalInfoFields').disabled = true;
-}
-
-
-
+// This function collects the user's boolean entries on whether or not they have a certain habit. 
+// The values for each habit variable in Firestore are False by default, until the user checks it off to become True. 
 function checkboxListen() {
     console.log("inside checkboxListen");
     document.getElementById("enterHabit").addEventListener("click", function () {
@@ -75,7 +52,7 @@ function checkboxListen() {
                     phoneaddiction: phoneaddiction,
                     gameaddiction: gameaddiction,
                     gamblingaddiction: gamblingaddiction
-                }, { merge: true })
+                }, { merge: true }) // Turns the default False values to True if the user checks off a specific habit.
             } else {
                 // No user is signed in.
             }
@@ -84,9 +61,8 @@ function checkboxListen() {
 }
 checkboxListen();
 
-
+// This function saves the user's habit entries from the checkbox form fill into Firestore database under collection "users"
 function saveHabit() {
-    console.log("inside write habit");
     var poortime = document.getElementById("poor-time").value;
     var lacksleep = document.getElementById("lack-sleep").value;
     var lackexercise = document.getElementById("lack-sleep").value;
@@ -111,7 +87,7 @@ function saveHabit() {
                     gamblingaddiction: gamblingaddiction,
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 }).then(() => {
-                    window.location.href = "viewhabits.html"; //new line added
+                    window.location.href = "viewhabits.html"; // Users are redirected to this page to view their habit checkbox entries. 
                 })
         } else {
             // No user is signed in.

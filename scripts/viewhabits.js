@@ -1,12 +1,11 @@
+// This function populates the users habits post-submission from categorize.html page.
+// Will return statements with boolean values indicating if they have selected the corresponding habit.
+
 function populateHabits() {
     let habitCardTemplate = document.getElementById("habitCardTemplate");
-    // let habitCardGroup = document.getElementById("habitCardGroup");
     let params = new URL(window.location.href);         //get URL of search bar
-    // let hikeCode = params.searchParams.get("id");       //get value for key "id"
     let habitEntered = params.searchParams.get("manualHabits");
-    // document.getElementById("HikeName").innerHTML = hikeName;
     let message = "Here are your submitted habits:" + habitEntered;
-    console.log("hello")
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -22,14 +21,14 @@ function populateHabits() {
                     const gamblingaddiction = doc.data().gamblingaddiction;
 
                     let habitCard = habitCardTemplate.content.cloneNode(true);
-                    habitCard.querySelector('.poortime').innerHTML = `poortime: ${poortime}`;
-                    habitCard.querySelector('.lacksleep').innerHTML = `lacksleep: ${lacksleep}`;
-                    habitCard.querySelector('.lackexercise').innerHTML = `lackexercise: ${lackexercise}`;
-                    habitCard.querySelector('.lackwater').innerHTML = `lackwater: ${lackwater}`;
-                    habitCard.querySelector('.lackposture').innerHTML = `lackposture: ${lackposture}`;
-                    habitCard.querySelector('.phoneaddiction').innerHTML = `phoneaddiction: ${phoneaddiction}`;
-                    habitCard.querySelector('.gameaddiction').innerHTML = `gameaddiction: ${gameaddiction}`;
-                    habitCard.querySelector('.gamblingaddiction').innerHTML = `gamblingaddiction: ${gamblingaddiction}`;
+                    habitCard.querySelector('.poortime').innerHTML = `It's ${poortime} that you have poor time management.`;
+                    habitCard.querySelector('.lacksleep').innerHTML = `It's ${lacksleep} that you are lacking sleep.`;
+                    habitCard.querySelector('.lackexercise').innerHTML = `It's ${lackexercise} that you are not exercising enough.`;
+                    habitCard.querySelector('.lackwater').innerHTML = `It's ${lackwater} that you can improve your water intake.`;
+                    habitCard.querySelector('.lackposture').innerHTML = `It's ${lackposture} that you can improve your posture.`;
+                    habitCard.querySelector('.phoneaddiction').innerHTML = `It's ${phoneaddiction} that you can spend less time on your phone.`;
+                    habitCard.querySelector('.gameaddiction').innerHTML = `It's ${gameaddiction} that you can play less games.`;
+                    habitCard.querySelector('.gamblingaddiction').innerHTML = `It's ${gamblingaddiction} that you can improve your gambling habit.`;
                     habitCardGroup.appendChild(habitCard);
                 }
 
@@ -39,4 +38,3 @@ function populateHabits() {
     })
 }
 populateHabits();
-console.log("hello2")

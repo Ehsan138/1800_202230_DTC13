@@ -38,12 +38,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
         body {
             background-image: url('../images/background6.jpg');
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
             text-align: center;
+            font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
@@ -66,13 +73,12 @@
         </nav>
     </nav>
 
-    <!-- the body of your page goes here -->
     <!--Accordion habit info-->
     <div class="main">
         <br>
-        <h1>Categorizing your habits.</h1>
+        <h1><b>Categorizing your habits.</h1></b>
         <br>
-        <h5>Click on the tabs below to learn more about our approach for habits.</h5>
+        <h5>Click on each tab below to learn more about how we define habits.</h5>
         <hr>
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -84,10 +90,12 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse"
                     aria-labelledby="flush-headingOne"="#accordionFlushExample">
-                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
-                        dignissimos.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde possimus corporis! Provident
-                        doloremque quia neque officia saepe. Architecto, in.
+                    <div class="accordion-body"><b>Overconsumption</b> is using something excessively more than you
+                        need. This
+                        could involve buying too many products, eating too much food, or watching too much television.
+
+                        We have all probably heard the phrase “everything in moderation,” but we often struggle to
+                        follow that guide, and this has led to a cycle of unhealthy habits.
                     </div>
                 </div>
             </div>
@@ -101,10 +109,10 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="flush-headingTwo"="#accordionFlushExample">
-                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus,
-                        aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero officia blanditiis
-                        nesciunt
-                        accusamus voluptates nisi voluptatem labore explicabo officiis vitae!
+                    <div class="accordion-body">The way we define <b>underconsumption</b> is if you are lacking
+                        something. For example, calorie underconsumption generally has negative effects on your body
+                        through physical performance, and host defense against infection. These effects can be mitigated
+                        incorporating more protein, mineral, and vitamin intakes into your diet.
                     </div>
                 </div>
             </div>
@@ -114,7 +122,7 @@
     </div>
     <!--Return to habits-->
     <br>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Return to Your Habits</button>
+    <a href="main.html" class="btn btn-primary">Return to Your Habits</a>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
