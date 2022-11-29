@@ -1,12 +1,11 @@
+// This function populates the users habits post-submission from categorize.html page.
+// Will return statements with boolean values indicating if they have selected the corresponding habit.
+
 function populateHabits() {
     let habitCardTemplate = document.getElementById("habitCardTemplate");
-    // let habitCardGroup = document.getElementById("habitCardGroup");
     let params = new URL(window.location.href);         //get URL of search bar
-    // let hikeCode = params.searchParams.get("id");       //get value for key "id"
     let habitEntered = params.searchParams.get("manualHabits");
-    // document.getElementById("HikeName").innerHTML = hikeName;
     let message = "Here are your submitted habits:" + habitEntered;
-    console.log("hello")
 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -39,4 +38,3 @@ function populateHabits() {
     })
 }
 populateHabits();
-console.log("hello2")
