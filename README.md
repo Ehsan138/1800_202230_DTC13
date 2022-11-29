@@ -33,13 +33,30 @@ index.html               # landing HTML file, this is what users see when you co
 README.md
 
 It has the following subfolders and files:
-.git                     # Folder for git repo
-images                   # Folder for images
-    /blah.jpg                # 
+.git                     
+images                   # Folder for images (background and logo only)
+    /background6.jpg                
+    /MyHabit.PNG                
 scripts                  # Folder for scripts
-    /blah.js                 # 
+    /authentication.js                
+    /categorize.js                
+    /firebaseAPI_TEAM13.js                
+    /firebaseAPI_TEAM99.js                
+    /habit.js                
+    /main.js                
+    /profile_page.js                
+    /settings.js                
+    /viewhabits.js                
 styles                   # Folder for styles
-    /blah.css                # 
+    /activities.css                
+    /categorize.css                
+    /habit.css                
+    /homepage.css                
+    /index.css                
+    /logincss.css                
+    /main.css                
+    /select.css                
+    /viewhabits.css                               
 
 Firebase hosting files: 
 .firebaserc...
