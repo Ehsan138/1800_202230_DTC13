@@ -4,14 +4,14 @@ body {
     width: 100%;
     background-image: url('./images/background7.jpg');
     background-size: cover;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .text_welcome {
     padding: 70px;
     font-size: 70px;
     color: white;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .heading {
@@ -27,7 +27,7 @@ i:hover {
 }
 
 .main {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .content {

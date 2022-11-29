@@ -6,14 +6,16 @@ body {
     min-width: 100%;
     min-height: 100%;
     text-align: center;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .text_welcome {
     padding: 70px;
     font-size: 70px;
     color: white;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .heading {
@@ -29,7 +31,8 @@ i:hover {
 }
 
 .main {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .navbar-light .navbar-brand {
