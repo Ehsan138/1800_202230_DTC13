@@ -93,10 +93,9 @@ function myFunction() {
 // deleteFromFirebase deletes user from the firebase auth and sends an alert warning them of this change
 // return: none
 // pram : none
-function deleteFromFirebase() {
+function new23() {
     console.log(currentUser)
     firebase.auth().currentUser.delete()
-    alert("Account deleted logout")
 }
 
 
@@ -112,7 +111,7 @@ function deleteUserById() {
             console.log(currentUser)
             db.collection('users').doc(currentUser).delete();
             console.log(db.collection('users').doc(currentUser))
-            deleteFromFirebase()
+            new23()
             // alert("Account deleted logout")
         }
     })
