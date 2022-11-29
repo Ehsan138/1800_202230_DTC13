@@ -1,3 +1,7 @@
+// insertName takes the name of user from the firestore
+// pram: none
+// return: none
+// R (read) user name from firestore
 function insertName() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
@@ -18,7 +22,9 @@ function insertName() {
 insertName();
 
 
-
+// randomQuote uses api and take random quote
+// pram: none
+// return: none
 function randomQuote() {
   $.ajax({
       url: "https://api.forismatic.com/api/1.0/?",
@@ -31,6 +37,8 @@ function randomQuote() {
   });
 }
 
+
+// call randomQuote function
 $(function() {
   randomQuote();
 });

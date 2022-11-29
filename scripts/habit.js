@@ -3,25 +3,28 @@
 //   x = String(x)
 //   $("#card-text").html(x)
 // }
-
-
 // function setup() {
 //   $("#goal-submit").click(goalEditHandler)
 // }
-
-
 // $(document).ready(setup)
 
 
-var currentUser;        //put this right after you start script tag before writing any functions.
+
+
+
+var currentUser; //put this right after you start script tag before writing any functions.
 
 // Ask the users about their goals and how they want to get notifications.
 
+// populateInfo takes info from the firestore
+// pram: none
+// return: none
+// R (read) from the firestore
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
         if (user) {
-            
+
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             //get the document for current user.
@@ -45,25 +48,31 @@ function populateInfo() {
                 })
         } else {
             // No user is signed in.
-            console.log ("No user is signed in");
+            console.log("No user is signed in");
         }
     });
 }
 
+
+
 //call the function to run it 
 // populateInfo();
-
+// pram: none
+// return: none
 function editUserInfo() {
-   //Enable the form fields
-   document.getElementById('personalInfoFields').disabled = false;
+    //Enable the form fields
+    document.getElementById('personalInfoFields').disabled = false;
 }
 
-// Saving the user answers in the firestore
 
+// Saving the user answers in the firestore
+// pram: none
+// return: none
+// U (update) user info
 function saveUserInfo() {
-    userNumber = document.getElementById('numberInput').value;       //get the value of the field with id="nameInput"
-    userStart_time = document.getElementById('start_timeInput').value;     //get the value of the field with id="schoolInput"
-    userEnd_time = document.getElementById('end_timeInput').value;       //get the value of the field with id="cityInput"
+    userNumber = document.getElementById('numberInput').value; //get the value of the field with id="nameInput"
+    userStart_time = document.getElementById('start_timeInput').value; //get the value of the field with id="schoolInput"
+    userEnd_time = document.getElementById('end_timeInput').value; //get the value of the field with id="cityInput"
 
     console.log(userNumber)
     $("#habit-goals-number").text(userNumber);
@@ -78,7 +87,7 @@ function saveUserInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
         if (user) {
-            
+
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             console.log(currentUser)
@@ -91,8 +100,7 @@ function saveUserInfo() {
                     console.log("Document successfully updated!");
                 })
 
-                document.getElementById('personalInfoFields').disabled = true;
-}}
-    )}
-
-    
+            document.getElementById('personalInfoFields').disabled = true;
+        }
+    })
+}

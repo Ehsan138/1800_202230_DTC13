@@ -1,6 +1,6 @@
 // This function populates the users habits post-submission from categorize.html page.
 // Will return statements with boolean values indicating if they have selected the corresponding habit.
-
+// R (read) from the firestore
 function populateHabits() {
     let habitCardTemplate = document.getElementById("habitCardTemplate");
     let params = new URL(window.location.href);         //get URL of search bar

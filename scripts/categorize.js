@@ -1,6 +1,9 @@
-var currentUser;        // global variable 
+var currentUser; // global variable 
 
 // This function populates the user's information and checks if they are logged in.
+// pram: none
+// return: none
+// R (read) user info
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
@@ -24,8 +27,12 @@ function populateInfo() {
     });
 }
 
+
 // This function collects the user's boolean entries on whether or not they have a certain habit. 
 // The values for each habit variable in Firestore are False by default, until the user checks it off to become True. 
+// pram: none
+// return: none
+// U (update) user info
 function checkboxListen() {
     console.log("inside checkboxListen");
     document.getElementById("enterHabit").addEventListener("click", function () {
@@ -52,7 +59,9 @@ function checkboxListen() {
                     phoneaddiction: phoneaddiction,
                     gameaddiction: gameaddiction,
                     gamblingaddiction: gamblingaddiction
-                }, { merge: true }) // Turns the default False values to True if the user checks off a specific habit.
+                }, {
+                    merge: true
+                }) // Turns the default False values to True if the user checks off a specific habit.
             } else {
                 // No user is signed in.
             }
@@ -61,7 +70,11 @@ function checkboxListen() {
 }
 checkboxListen();
 
+
 // This function saves the user's habit entries from the checkbox form fill into Firestore database under collection "users"
+// pram: none
+// return: none
+// U (update) the user info
 function saveHabit() {
     var poortime = document.getElementById("poor-time").value;
     var lacksleep = document.getElementById("lack-sleep").value;
@@ -93,4 +106,4 @@ function saveHabit() {
             // No user is signed in.
         }
     });
-} 
+}
