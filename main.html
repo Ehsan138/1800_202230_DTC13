@@ -39,9 +39,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css" />
     <style>
+        html,
         body {
-            background-image: url('../images/background6.jpg');
+            height: 100%;
+            width: 100%;
+        }
 
+        body {
+            background-image: url('./images/background6.jpg');
+            font-family: 'Playfair Display', serif;
             background-size: cover;
             min-width: 100%;
             min-height: 100%;
@@ -101,8 +107,10 @@
 
         <hr>
 
-        <a id="habitBtn" href="./habit.html" style="display: block; margin-bottom: 10px;"><button
-                class='btn btn-dark'>Habits</button></a>
+        <div id="habitBtn" style="clear: both; margin-bottom: 30px;"><a href="./habit.html"></a><button
+                class='btn btn-dark'>Habits</button></div>
+        <!-- <a id="habitBtn" href="./habit.html" style="clear: both; margin-bottom: 130px;"><button
+                class='btn btn-dark'>Habits</button></a> -->
 
 
         <a class="habit-card">
@@ -154,6 +162,8 @@
             </div>
         </a>
     </div>
+
+    <br>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
