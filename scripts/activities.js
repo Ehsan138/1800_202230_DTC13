@@ -2,6 +2,8 @@ var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = ["red", "green","blue","orange","brown"];
 
+// A function to create a chart based on the variables xValues, yValues, and barColors.
+
 new Chart("chart-1", {
   type: "bar",
   data: {
