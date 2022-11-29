@@ -1,4 +1,6 @@
-//Name
+// insertName reads the database and returns the user name
+// pram: none
+// return: none
 function insertName() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
@@ -18,7 +20,12 @@ function insertName() {
 }
 insertName();
 
-//Email
+
+
+
+// insertEmail reads the database and returns the user email
+// pram: none
+// return: none
 function insertEmail() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
@@ -38,7 +45,10 @@ function insertEmail() {
 }
 insertEmail();
 
-//School
+
+// insertSchool reads the database and returns the users school
+// pram: none
+// return: none
 function insertSchool() {
     // to check if the user is logged in:
     firebase.auth().onAuthStateChanged(user => {
