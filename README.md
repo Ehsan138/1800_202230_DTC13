@@ -9,7 +9,6 @@
 This browser based web application to ...
 
 * Hi my name is Annette. I'm excited about this project because we can make our own app! :)
-
 * Hi my name is Ehsan, and I'm excited about this project.
 * Hi my name is jaskarn, and I'm excited about this project.
  
@@ -20,7 +19,7 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap
-* ...
+* API
 
  
 ## Content
@@ -28,7 +27,7 @@ Technologies used for this project:
 Content of the project folder:
 
 ```
- Top level of project folder: 
+Top level of project folder: 
 .gitignore               # Git ignore file
 index.html               # landing HTML file, this is what users see when you come to url
 README.md
