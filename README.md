@@ -8,9 +8,9 @@
 
 This browser based web application belongs to ...
 
-* Hi my name is Annette. I'm excited about this project because we can make our own app! :)
-* Hi my name is Ehsan, and I'm excited about this project.
-* Hi my name is jaskarn, and I'm excited about this project.
+* Annette Lam A01333174
+* Ehsan Emadi A01291627
+* Jaskarn Bhatti A01328100
 
 Our app in a nutshell: Our team is developing a web application to help people who have difficulties managing their habits by providing helpful features, such as reminders and stats based on users' data.
  
