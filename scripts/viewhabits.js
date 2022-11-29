@@ -22,7 +22,7 @@ function populateHabits() {
                     const gamblingaddiction = doc.data().gamblingaddiction;
 
                     let habitCard = habitCardTemplate.content.cloneNode(true);
-                    habitCard.querySelector('.poortime').innerHTML = `poortime: ${poortime}`;
+                    habitCard.querySelector('.poortime').innerHTML = `it's ${poortime} that you have poor time management`;
                     habitCard.querySelector('.lacksleep').innerHTML = `lacksleep: ${lacksleep}`;
                     habitCard.querySelector('.lackexercise').innerHTML = `lackexercise: ${lackexercise}`;
                     habitCard.querySelector('.lackwater').innerHTML = `lackwater: ${lackwater}`;
