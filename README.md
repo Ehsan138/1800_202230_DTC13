@@ -29,8 +29,20 @@ Content of the project folder:
 ```
 Top level of project folder: 
 .gitignore               # Git ignore file
-index.html               # landing HTML file, this is what users see when you come to url
-README.md
+    /index.html             # landing HTML file, this is what users see when you come to url
+    /account_delete.html    # account deletion screen
+    /categorize.html        # users enter habits here
+    /habit.html             # users set goals here for their habits
+    /index.html             # main login/signup page
+    /login.html             # login loading page
+    /logout_page.html       # logout success page
+    /main.html              # main page with quote generator API
+    /profile_page.html      # user info page 
+    /select.html            # habit categorization info page
+    /setting.html           # settings page
+    /template.html          # our template
+    /viewhabits.html        # habits post-submission success page
+    README.md
 
 It has the following subfolders and files:
 .git                     
